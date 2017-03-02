@@ -1,0 +1,14 @@
+<div class="day-column">
+    <div class="day-name">{{date.label}}</div>
+    <div class="day-schedule"
+         data-ng-repeat="hour in hours"
+         data-ng-click="createEvent(hour)"></div>
+
+    <div class="event-container"
+         data-ng-repeat="event in events|orderBy:'startDate'"
+         data-event="event"
+         data-ng-style="{{event | setEventStyle:events:date.value}}">
+        <p>{{event.name}}</p>
+        <p>{{event.startDate|date:'hh:mm a'}} - {{event.endDate|date:'hh:mm a'}}</p>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="date-control">
+        <div>
+            <input type="button" class="btn btn-default" data-ng-click="getToday()" value="Today"/>
+            <input type="button" class="btn btn-default" data-ng-click="goToPreviousRange()" value="Prev"/>
+            <input type="button" class="btn btn-default" data-ng-click="goToNextRange()" value="Next"/>
+        </div>
+        <div>
+            <input type="button" class="btn btn-default" data-ng-click="changeViewMode(1)" value="One"/>
+            <input type="button" class="btn btn-default" data-ng-click="changeViewMode(4)" value="Four"/>
+            <input type="button" class="btn btn-default" data-ng-click="changeViewMode(7)" value="Week"/>
+        </div>
+    </div>
+
+    <div class="calendar-wrapper">
+        <div class="calendar-container">
+            <div class="day-column hours-details">
+                <div class="day-name"></div>
+                <div class="day-schedule"
+                     data-ng-repeat="hour in hours">
+                    {{hour}}
+                </div>
+            </div>
+
+            <div data-ng-repeat="day in days"
+                data-day-container
+                data-events="dataEvents[day.value]"
+                data-date="day"
+                data-edit="editEvent">
+            </div>
+        </div>
+    </div>
+
+</div>

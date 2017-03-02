@@ -1,0 +1,51 @@
+.event-editor {
+    padding: 15px 30px;
+
+    h3,
+    label,
+    span {
+        font-weight: normal;
+    }
+
+    form {
+        input[type=text],
+        input[type=time],
+        input[type=date] {
+            line-height: 18px;
+            width: auto;
+            height: 22px;
+        }
+
+        .one-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            input {
+                flex: 1;
+                margin-right: 15px;
+            }
+        }
+
+        .error-text {
+            color: @brand-danger;
+        }
+
+        .block-control {
+            input {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+
+        .action-block {
+            display: flex;
+            justify-content: flex-end;
+            margin: 15px;
+
+            > * {
+                margin-left: 10px;
+            }
+        }
+    }
+}
