@@ -1,11 +1,8 @@
 'use strict';
 
 var gulp = require('gulp');
-var gulpif = require('gulp-if');
 var replace = require('gulp-replace');
-var minifyHTML = require('gulp-minify-html');
 var livereload = require('gulp-livereload');
-var inlinesource = require('gulp-inline-source');
 var fs = require('fs');
 
 var callback = function () {

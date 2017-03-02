@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb/legacy",
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "angular": false,
+    "moment": false
+  },
+  "rules": {
+    "strict": [
+      2,
+      "function"
+    ],
+    "func-names": 0,
+    "id-length": 0
+  }
+}
